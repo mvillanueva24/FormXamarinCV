@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCV.Views.FormularioCVPage">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Formulario para CV" 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <Label Text="Nombre y Apellidos"/>
+            <Entry x:Name="NombreEntry" Placeholder="Ingrese nombre completo"/>
+
+            <Label Text="Fecha de Nacimiento"/>
+            <DatePicker x:Name="FechaNacimientoPicker" Format="dd/MM/yyyy"/>
+
+            <Label Text="Ocupación"/>
+            <Entry x:Name="OcupacionEntry" Placeholder="Ingrese ocupación"/>
+
+            <Label Text="Teléfono"/>
+            <Entry x:Name="TelefonoEntry" Placeholder="Ingrese teléfono" Keyboard="Telephone"/>
+
+            <Label Text="Correo electrónico"/>
+            <Entry x:Name="CorreoEntry" Placeholder="Ingrese correo" Keyboard="Email"/>
+
+            <Label Text="Nacionalidad"/>
+            <Picker x:Name="NacionalidadPicker">
+                <Picker.Items>
+                    <x:String>Perú</x:String>
+                    <x:String>México</x:String>
+                    <x:String>España</x:String>
+                    <x:String>Argentina</x:String>
+                    <x:String>Colombia</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Nivel de Inglés" Margin="0,10,0,0"/>
+            <StackLayout>
+                <RadioButton x:Name="BasicoRadio" Content="Básico"/>
+                <RadioButton x:Name="IntermedioRadio" Content="Intermedio"/>
+                <RadioButton x:Name="AvanzadoRadio" Content="Avanzado"/>
+                <RadioButton x:Name="FluidoRadio" Content="Fluido"/>
+            </StackLayout>
+
+            <Label Text="Lenguajes de programación" Margin="0,10,0,0"/>
+            <StackLayout>
+                <CheckBox x:Name="JavascriptCheck"/>
+                <Label Text="Javascript" />
+                <CheckBox x:Name="PythonCheck"/>
+                <Label Text="Python" />
+                <CheckBox x:Name="PHPCheck"/>
+                <Label Text="PHP" />
+            </StackLayout>
+
+            <Label Text="Aptitudes"/>
+            <Editor x:Name="AptitudesEditor" 
+                    HeightRequest="100" 
+                    Placeholder="Describe tus aptitudes"/>
+
+            <Label Text="Habilidades" Margin="0,10,0,0"/>
+            <StackLayout>
+                <CheckBox x:Name="InteligenciaCheck"/>
+                <Label Text="Inteligencia Emocional" />
+                <CheckBox x:Name="EspirituCheck"/>
+                <Label Text="Espíritu Crítico" />
+                <CheckBox x:Name="TrabajoEquipoCheck"/>
+                <Label Text="Trabajo en Equipo" />
+            </StackLayout>
+
+            <Label Text="Perfil"/>
+            <Editor x:Name="PerfilEditor" 
+                    HeightRequest="150" 
+                    Placeholder="Describe tu perfil profesional"/>
+
+            <Button Text="Enviar" 
+                    BackgroundColor="#3F51B5" 
+                    TextColor="White"
+                    Margin="0,20,0,20"
+                    Clicked="OnEnviarClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

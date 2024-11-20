@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCV.Views.VistaDatosPage"
+             BackgroundColor="#F5F5F5">
+    <ScrollView>
+        <StackLayout>
+            <!-- Header con imagen y nombre -->
+            <Frame BackgroundColor="#424242" 
+                   Padding="20"
+                   HasShadow="False">
+                <StackLayout HorizontalOptions="Center" 
+                           Spacing="10">
+                    <Frame CornerRadius="50" 
+                           HeightRequest="100" 
+                           WidthRequest="100" 
+                           HorizontalOptions="Center"
+                           Padding="0"
+                           IsClippedToBounds="True"
+                           BackgroundColor="Transparent"
+                           BorderColor="Transparent">
+                        <Image Source="user.png"
+                               Aspect="AspectFill"/>
+                    </Frame>
+                    <Label x:Name="NombreLabel"
+                           TextColor="White"
+                           FontSize="20"
+                           HorizontalOptions="Center"/>
+                    <Label x:Name="OcupacionLabel"
+                           TextColor="LightGray"
+                           FontSize="14"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Contenido principal -->
+            <StackLayout Padding="20" Spacing="20" BackgroundColor="white">
+                <!-- Sección Perfil -->
+                <StackLayout  BackgroundColor="#f5f5f5" Padding="10">
+                    <Label Text="PERFIL"
+                           FontSize="16"
+                           TextColor="#212121"
+                           FontAttributes="Bold"/>
+                    <BoxView HeightRequest="1"
+                            BackgroundColor="#E0E0E0"
+                            Margin="0,5,0,10"/>
+                    <Label x:Name="PerfilLabel"
+                           TextColor="#757575"/>
+                </StackLayout>
+
+                <!-- Sección Información Personal -->
+                <StackLayout BackgroundColor="#f5f5f5" Padding="10">
+                    <Label Text="INFORMACIÓN PERSONAL"
+                           FontSize="16"
+                           TextColor="#212121"
+                           FontAttributes="Bold"/>
+                    <BoxView HeightRequest="1"
+                            BackgroundColor="#E0E0E0"
+                            Margin="0,5,0,10"/>
+                    <StackLayout x:Name="InfoPersonalStack" Spacing="5"/>
+                </StackLayout>
+
+                <!-- Sección Habilidades -->
+                <StackLayout BackgroundColor="#f5f5f5" Padding="10">
+                    <Label Text="HABILIDADES Y COMPETENCIAS"
+                           FontSize="16"
+                           TextColor="#212121"
+                           FontAttributes="Bold"/>
+                    <BoxView HeightRequest="1"
+                            BackgroundColor="#E0E0E0"
+                            Margin="0,5,0,10"/>
+                    <StackLayout x:Name="HabilidadesStack" Spacing="5"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
